@@ -8,6 +8,30 @@
 </head>
 <body>
     Dashboard
-    <a href="{{ route("logout") }}" class="text-violet">Logout</a>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline;">
+      @csrf
+      <button type="submit" id="logoutBtn" style="background: none; border: none; color: #007bff; text-decoration: underline; cursor: pointer; padding: 0;">
+        Logout
+      </button>
+    </form>
+
+    <script>
+    $(document).ready(function(){
+        const token = localStorage.getItem('api_token',response.token);
+        $('#logoutBtn').on('click',function(){
+            $.ajax({
+                url:'http://127.0.0.1:8000/api/logout',
+                type:'POST',
+                headers: {
+                            "Authorization": `Bearer ${token}`
+                        },
+                contentType:'application/json',
+                success:function(response){
+                    window.location.href = 'http://127.0.0.1:8000/';
+                }
+            })
+        })
+    }) 
+    </script>
 </body>
 </html>

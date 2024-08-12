@@ -15,13 +15,15 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <script defer src="{{ asset('/assets/js/copy.js')  }}"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js" integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
 
     <body class="bg-black">
         <section class="py-4 md:py-4">
-            <div class="container max-w-screen-2xl mx-auto px-4">
+            <div class="container max-w-screen-2xl mx-auto px-8">
         @yield('dynamic')
 
         <footer class="bg-white py-8 md:py-16">
@@ -73,6 +75,5 @@
         <script>
             feather.replace()
         </script>
-
     </body>
 </html>

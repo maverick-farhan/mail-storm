@@ -123,7 +123,7 @@
                 </div>
 
                 <h1 class="my-4 px-8 py-3 font-medium text-black bg-white text-lg text-center border-2 border-white rounded-md hover:bg-white hover:text-gray-700 transition ease-linear duration-300">
-                    <a class="hover:underline" href="{{ route('signup') }}">I'm Convinced! Let's Setup</a>
+                    <a class="hover:underline" href="{{ route('signup_view') }}">I'm Convinced! Let's Setup</a>
                 </h1>
 
             </div> <!-- container.// -->

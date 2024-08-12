@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('emails', function (Blueprint $table) {
             $table->id();
-            $table->string('emails')->unique();
             $table->string('name')->nullable();
-            $table->integer('user_id')->autoIncrement();
+            $table->string('user_email')->unique();
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
